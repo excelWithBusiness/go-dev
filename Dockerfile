@@ -1,6 +1,6 @@
 FROM golang:1.9
 
-ENV SCRIPTS /docker-startup/scripts/
+ENV SCRIPTS /docker-startup
 
 COPY scripts /docker-startup/
 
