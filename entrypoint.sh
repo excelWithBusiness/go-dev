@@ -1,7 +1,11 @@
 #!/bin/bash
+set -e
 
-for f in scripts/*.sh; do
+echo "Running scripts..."
+for f in $SCRIPTS/*.sh; do
+    echo "Running '$f'..."
     bash $f
 done
 
+echo "Running command..."
 exec "$@"
