@@ -2,7 +2,7 @@ FROM golang:1.9
 
 ENV SCRIPTS /docker-startup
 
-COPY entrypoint.sh /docker-startup
+COPY entrypoint.sh /docker-startup/entrypoint.sh
 COPY scripts /docker-startup/scripts
 
 RUN go get -u github.com/kardianos/govendor \
