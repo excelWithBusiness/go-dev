@@ -10,4 +10,6 @@ RUN go get -u github.com/kardianos/govendor \
 COPY scripts $SCRIPTS
 COPY entrypoint.sh /docker-startup/
 
+RUN chmod +x /docker-startup/entrypoint.sh
+
 ENTRYPOINT ["/docker-startup/entrypoint.sh"]
