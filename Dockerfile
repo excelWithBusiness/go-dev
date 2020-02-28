@@ -1,11 +1,10 @@
-FROM golang:1.9
+FROM golang:1.13
 
 ENV SCRIPTS /docker-startup/scripts
+ENV GOPRIVATE github.com/excelWithBusiness
 
-RUN go get -u github.com/kardianos/govendor \
-	&& go get golang.org/x/tools/cmd/goimports \
-	&& go get -u github.com/golang/lint/golint \
-	&& go get -u github.com/golang/dep/cmd/dep
+RUN go get golang.org/x/tools/cmd/goimports \
+	&& go get -u golang.org/x/lint/golint
 
 COPY scripts $SCRIPTS
 COPY entrypoint.sh /docker-startup/
