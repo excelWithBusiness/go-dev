@@ -11,4 +11,7 @@ COPY entrypoint.sh /docker-startup/
 
 RUN chmod +x /docker-startup/entrypoint.sh
 
+WORKDIR /app
+COPY ./ /app
+
 ENTRYPOINT ["/docker-startup/entrypoint.sh"]
