@@ -1,4 +1,4 @@
-FROM golang:1.13
+FROM golang:1.15
 
 ENV SCRIPTS /docker-startup/scripts
 ENV GOPRIVATE github.com/excelWithBusiness
